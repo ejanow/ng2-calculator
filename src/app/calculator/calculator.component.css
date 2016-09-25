@@ -47,3 +47,7 @@ h1 {
     margin: 2pt;
     font-size: 14pt;
 }
+
+#display {
+    text-align: right;
+}
