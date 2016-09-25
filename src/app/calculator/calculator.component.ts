@@ -32,10 +32,10 @@ class Calculator {
       return this.clear();
     }
 
-    switch( this.op ) {
-      case Operator.Plus:  this.val += this.old; break;
-      case Operator.Minus: this.val += this.old; break;
-      case Operator.Times: this.val *= this.old; break;
+    switch ( this.op ) {
+      case Operator.Plus:  this.val = this.val + this.old; break;
+      case Operator.Minus: this.val = this.old - this.val; break;
+      case Operator.Times: this.val = this.val * this.old; break;
       case Operator.Divide: this.val = this.old / this.val; break;
       default: break;
     }
@@ -47,8 +47,7 @@ class Calculator {
     if (this.isClean) {
       this.old = this.val;
       this.val = num;
-    }
-    else {
+    } else {
       this.val = (this.val * 10) + num;
     }
 
@@ -56,16 +55,17 @@ class Calculator {
   }
 
   keyboardEventHandler(event: KeyboardEvent): void {
-    switch( event.keyCode ) {
-        case 96:  
+    switch ( event.keyCode ) {
+        
+        case 96:
         case 48: this.processNum(0); break;
         case 97:
         case 49: this.processNum(1); break;
-        case 98: 
+        case 98:
         case 50: this.processNum(2); break;
-        case 99: 
+        case 99:
         case 51: this.processNum(3); break;
-        case 100: 
+        case 100:
         case 52: this.processNum(4); break;
         case 101:
         case 53: this.processNum(5); break;
@@ -83,7 +83,6 @@ class Calculator {
         case 8: this.processOp(Operator.Clear); break;
         case 106: this.processOp(Operator.Times); break;
         case 107: this.processOp(Operator.Plus); break;
-        case 13: this.processOp(Operator.Equals); break;
 
         default: break;
     }
@@ -108,8 +107,8 @@ export class CalculatorComponent implements OnInit {
   ngOnInit() {
     let self = this;
     setTimeout( () => {
-      document.addEventListener('keydown', (event) => { 
-        self.calc.keyboardEventHandler(event)
+      document.addEventListener('keydown', (event) => {
+          self.calc.keyboardEventHandler(event);
         });
     }, 0);
 

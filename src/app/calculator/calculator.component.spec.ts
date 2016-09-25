@@ -9,7 +9,7 @@ describe('Component: Calculator', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should be able to perform calculations', () => {
+  it('Should be able to perform calculations', async(() => {
     let cc = new CalculatorComponent;
     let c = cc.calc;
     let op = cc.op;
@@ -33,10 +33,7 @@ describe('Component: Calculator', () => {
 
     let result = c.val;
 
-    expect(result).toEqual()
+    expect(result).toEqual(34);
 
-
-
-
-  });
+  }));
 });
