@@ -1,33 +1,33 @@
 <div class="spacer"></div>
 
-        <div class="container">
-            <div id="calculator" (onkeydown)="calc.keyboard($event)">
-                <div id="display">{{calc.val}}
-                    <button id="clear" class="calcButton" type="button" (click)="calc.processOp( op.Clear )">C</button>
-                </div>
-                <div class="calcRow">
-                    <button class="calcButton" type="button" (click)="calc.processNum(7)">7</button>
-                    <button class="calcButton" type="button" (click)="calc.processNum(8)">8</button>
-                    <button class="calcButton" type="button" (click)="calc.processNum(9)">9</button>
-                </div>
-                <div class="calcRow">
-                    <button class="calcButton" type="button" (click)="calc.processNum(4)">4</button>
-                    <button class="calcButton" type="button" (click)="calc.processNum(5)">5</button>
-                    <button class="calcButton" type="button" (click)="calc.processNum(6)">6</button>
-                </div>
-                <div class="calcRow">
-                    <button class="calcButton" type="button" (click)="calc.processNum(1)">1</button>
-                    <button class="calcButton" type="button" (click)="calc.processNum(2)">2</button>
-                    <button class="calcButton" type="button" (click)="calc.processNum(3)">3</button>
-                </div>
-                <div class="calcRow">
-                    <button class="calcButton" type="button" (click)="calc.processOp( op.Equals )">=</button>
-                    <button class="calcButton" type="button" (click)="calc.processNum( 0 )">0</button>
-                    <button class="calcButton" type="button" (click)="calc.processOp( op.Divide )">/</button>
-                </div>
-                <div class="calcRow">
-                    <button class="calcButton" type="button" (click)="calc.processOp( op.Plus )">+</button>
-                    <button class="calcButton" type="button" (click)="calc.processOp( op.Minus )">-</button>
-                    <button class="calcButton" type="button" (click)="calc.processOp( op.Times )">*</button>
-                </div>
+<div class="container">
+    <div id="calculator" (onkeydown)="calc.keyboard($event)">
+        <div id="display">{{calc.val}}
+            <button id="clear" class="calcButton" type="button" (click)="calc.processOp( op.Clear )">C</button>
         </div>
+        <div class="calcRow">
+            <button class="calcButton" type="button" (click)="calc.processNum(7)">7</button>
+            <button class="calcButton" type="button" (click)="calc.processNum(8)">8</button>
+            <button class="calcButton" type="button" (click)="calc.processNum(9)">9</button>
+        </div>
+        <div class="calcRow">
+            <button class="calcButton" type="button" (click)="calc.processNum(4)">4</button>
+            <button class="calcButton" type="button" (click)="calc.processNum(5)">5</button>
+            <button class="calcButton" type="button" (click)="calc.processNum(6)">6</button>
+        </div>
+        <div class="calcRow">
+            <button class="calcButton" type="button" (click)="calc.processNum(1)">1</button>
+            <button class="calcButton" type="button" (click)="calc.processNum(2)">2</button>
+            <button class="calcButton" type="button" (click)="calc.processNum(3)">3</button>
+        </div>
+        <div class="calcRow">
+            <button class="calcButton" type="button" (click)="calc.processOp( op.Equals )">=</button>
+            <button class="calcButton" type="button" (click)="calc.processNum( 0 )">0</button>
+            <button class="calcButton" type="button" (click)="calc.processOp( op.Divide )">/</button>
+        </div>
+        <div class="calcRow">
+            <button class="calcButton" type="button" (click)="calc.processOp( op.Plus )">+</button>
+            <button class="calcButton" type="button" (click)="calc.processOp( op.Minus )">-</button>
+            <button class="calcButton" type="button" (click)="calc.processOp( op.Times )">*</button>
+        </div>
+    </div>
