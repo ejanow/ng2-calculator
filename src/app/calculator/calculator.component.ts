@@ -43,19 +43,19 @@ class Calculator {
     this.op = op;
   }
 
-  processNum(i: number) {
+  processNum(num: number): void {
     if (this.isClean) {
       this.old = this.val;
-      this.val = i;
+      this.val = num;
     }
     else {
-      this.val = (this.val * 10) + i;
+      this.val = (this.val * 10) + num;
     }
 
     this.isClean = false;
   }
 
-  keyboardEventHandler(event:KeyboardEvent) {
+  keyboardEventHandler(event: KeyboardEvent): void {
     switch( event.keyCode ) {
         case 96:  
         case 48: this.processNum(0); break;
